@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8" />
+
+  <!--link rel="stylesheet" type="text/css" href="assets/css/reset.css"-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>The Matrix Trivia Game</title>
+
+</head> 
+
+<body>
+
+  <div class="card bg-dark text-white">
+      <img class="card-img" src="assets/images/matrix-banner-bg.png" alt="Card image">
+      <div class="card-img-overlay">
+        <h1 class="card-title">The Matrix Trivia Game</h1>
+        <p class="lead">This is a trivia game about The Matrix movie.</p>
+        <p class="card-text">Rules: All questions will be presented on the screen.</p>
+        <p class="card-text">The game is timed and will begin when game is started.</p>
+        <p class="card-text">There is only one answer to each question.</p>
+        <p class="card-text">Good luck.</p>
+        <button type="button" class="btn btn-success">Start</button>
+      </div>
+    </div>
+
+  <div class="container">
+    <section class="status">
+      <!-- Timer-->
+      <div class="row">
+          <div class="col-sm">Time Left:</div>
+          <div class="col-sm">Questions Correct:</div>
+          <div class="col-sm">Questions Incorrect:</div>
+      </div>
+    </section>
+    <hr>
+
+  </div> <!--close container-->
+<div class="container">
+  <form name="matrixForm" onsubmit="return submitAnswers()">  
+  <section class="q1">
+      <div class="row">
+          <div class="col-sm-7">
+            <h5>1. The cast member 'Neo" is actor?</h5>
+          </div>
+          <div class="col-sm-5">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q1" id="q1a" value="a">
+                  <label class="form-check-label" for="q1a">Carrie Ann Moss</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q1" id="q1b" value="b">
+                  <label class="form-check-label" for="q1b">Keanu Reaves</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q1" id="q1c" value="c">
+                  <label class="form-check-label" for="q1c">Lawrance Fishburn</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q1" id="q1d" value="d">
+                  <label class="form-check-label" for="q1d">Harrison Ford</label>
+              </div>
+          </div>
+        </div>
+  </section>
+  <hr>
+  <section class="q2">
+      <div class="row">
+          <div class="col-sm-7">
+            <h5>2. A basic premise of the movie is ?</h5>
+          </div>
+          <div class="col-sm-5">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q2" id="q2a" value="a">
+                  <label class="form-check-label" for="q2a">People are an energy source under the control of AI.</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q2" id="q2b" value="b">
+                  <label class="form-check-label" for="q2b">Machines have taken over and made so much product that most have no job and sit around all day consumed with pleasures.</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q2" id="q2c" value="c">
+                  <label class="form-check-label" for="q2c">No one cares about the earth and it is decaying.</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q2" id="q2d" value="d">
+                  <label class="form-check-label" for="q2d">Earth is a utopia and aliens have discovered it.</label>
+              </div>
+          </div>
+        </div>
+  </section>
+  <hr>
+  <section class="q3">
+      <div class="row">
+          <div class="col-sm-7">
+            <h5>3. How many major motion pictures are there in the series?</h5>
+          </div>
+          <div class="col-sm-5">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q3" id="q3a" value="a">
+                  <label class="form-check-label" for="q3a">Two</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q3" id="q3b" value="b">
+                  <label class="form-check-label" for="q3b">Four</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q3" id="q3c" value="c">
+                  <label class="form-check-label" for="q3c">Three</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q3" id="q3d" value="d">
+                  <label class="form-check-label" for="q3d">Five</label>
+              </div>
+          </div>
+        </div>
+  </section>
+  <hr>
+  <section class="q4">
+      <div class="row">
+          <div class="col-sm-7">
+            <h5>4. The last earth city of humans is called ?</h5>
+          </div>
+          <div class="col-sm-5">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q4" id="q4a" value="a">
+                  <label class="form-check-label" for="q4a">Arrat</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q4" id="q4b" value="b">
+                  <label class="form-check-label" for="q4b">Utopia</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q4" id="q4c" value="c">
+                  <label class="form-check-label" for="q4c">Chicago</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q4" id="q4d" value="d">
+                  <label class="form-check-label" for="q4d">Zion</label>
+              </div>
+          </div>
+        </div>
+  </section>
+  <hr>
+  <section class="q5">
+      <div class="row">
+          <div class="col-sm-7">
+            <h5>5. The rogue agent, Neos nemesis is named ?</h5>
+          </div>
+          <div class="col-sm-5">
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q5" id="q5a" value="a">
+                  <label class="form-check-label" for="q5a">George</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q5" id="q5b" value="b">
+                  <label class="form-check-label" for="q5b">Franklin</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q5" id="q5c" value="c">
+                  <label class="form-check-label" for="q5c">Smith</label>
+              </div>
+              <div class="form-check">
+                  <input class="form-check-input" type="radio" name="q5" id="q5d" value="d">
+                  <label class="form-check-label" for="q5d">William</label>
+              </div>
+          </div>
+        </div>
+  </section>
+  <hr>
+  <input class="button" type="submit" value="Submit Answers">
+</form>
+</div> <!--close container-->
+<hr>
+<footer>
+<p>Copyright &copy; Mitchell Mask 2018</p> 
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="assets/javascript/trivia.js"></script>
+
+</body>
+
+</html>
